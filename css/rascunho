@@ -1,0 +1,47 @@
+.dropdown-menu {
+    background-color: #FFF;
+    color: #4B0082;
+    display: none;
+    /* Ocultar inicialmente o menu dropdown */
+    position: absolute;
+    /* Posicionamento absoluto em relação ao botão */
+    z-index: 1000;
+    /* Z-index para garantir que fique acima de outros elementos */
+}
+
+.dropdown-menu.show {
+    display: block; 
+    /* Exibir o menu dropdown quando estiver aberto */
+}
+
+.dropdown-item {
+    color: #212529;
+    /* Cor do texto dos itens do dropdown */
+    padding: 0.5rem 1rem;
+    /* Espaçamento interno dos itens */
+    clear: both;
+    /* Limpar o float */
+    font-weight: normal;
+    /* Peso da fonte normal */
+    text-align: inherit;
+    /* Alinhamento de texto padrão */
+    white-space: nowrap;
+    /* Não quebrar linha */
+}
+
+
+.dropdown-item:hover {
+    color: #212529;
+    /* Cor de fundo ao passar o mouse nos itens do dropdown */
+}
+
+.dropdown-toggle::after {
+    display: inline-block;
+    margin-left: 0.255em;
+    vertical-align: 0.255em;
+    content: "";
+    border-top: 0.3em solid;
+    border-right: 0.3em solid transparent;
+    border-bottom: 0;
+    border-left: 0.3em solid transparent;
+}

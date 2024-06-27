@@ -1,0 +1,298 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #E5E5E5;
+    /* tom pastel claro */
+    color: #333;
+    font-size: 1.5em;
+    /* alterado para unidade em */
+    background-image: url('imagens/homePage.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1em, 2em;
+    background-color: #4B0082;
+    /* roxo escuro */
+    color: #FFF;
+}
+
+.navbar ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 1em;
+    flex-wrap: wrap;
+}
+
+.navbar ul li {
+    display: inline;
+}
+
+.navbar ul li a {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+    font-size: 1vw;
+    color: #edf0f1;
+    text-decoration: none;
+}
+
+.navbar .logo {
+    font-size: 1.5em;
+    /* ajustado para unidade em */
+    font-weight: bold;
+    flex-grow: 1;
+}
+
+
+/* Estilo para a barra de navegação com underline */
+.nav-underline {
+    border-bottom: 2px #FFF;
+    /* Linha inferior */
+    padding-left: 0;
+    /* Remover o padding padrão da lista */
+}
+
+.nav-item {
+    display: inline-block;
+}
+
+.nav-link {
+    padding: 0.5rem 1rem;
+    color: #FFF;
+    text-decoration: none;
+    position: relative;
+    /* Para posicionamento do underline */
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: #FFF;
+    /* Cor do underline */
+    transition: width 0.3s ease;
+    /* Transição para animação */
+}
+
+.nav-link:hover::after {
+    width: 100%;
+    /* Expandir o underline ao passar o mouse */
+}
+
+.nav-link.active::after {
+    width: 100%;
+    /* Expandir o underline para o link ativo */
+}
+
+/* Estilo para o dropdown */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-toggle {
+    padding: 0.5rem 1rem;
+    font-size: 1.3rem;
+    line-height: 1.5;
+    color: #FFF;
+    background-color: #4B0082;
+    cursor: pointer;
+    font-family: Arial, sans-serif;
+}
+
+.dropdown-toggle:focus {
+    outline: none;
+    box-shadow: 0 0 0 0.25rem rgba(147, 18, 227, 0.25);
+}
+
+.dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 1000;
+    display: none;
+    float: left;
+    min-width: 10rem;
+    padding: 0.5rem 0;
+    margin: 0.125rem 0 0;
+    font-size: 1rem;
+    color: #090909;
+    text-align: left;
+    list-style: none;
+    background-color: #FFF;
+    background-clip: padding-box;
+}
+
+.dropdown-menu.show {
+    display: block;
+}
+
+.dropdown-item {
+    display: block;
+    width: 100%;
+    padding: 0.25rem 1.5rem;
+    clear: both;
+    font-weight: 40;
+    color: #090909;
+    text-align: inherit;
+    white-space: nowrap;
+    background-color: transparent;
+    border: 0;
+}
+
+.dropdown-item:hover,
+.dropdown-item:focus {
+    color: #FFF;
+    text-decoration: none;
+    background-color: #ad08ef;
+    /*cor do fundo ao passar o mouse*/
+}
+
+.dropdown-item.active,
+.dropdown-item:active {
+    color: #FFF;
+    /*cor da letra ao clicar*/
+    text-decoration: none;
+    background-color: #4B0082;
+    /*cor do fundo ao clicar*/
+}
+
+.dropdown-item.disabled,
+.dropdown-item:disabled {
+    pointer-events: none;
+    color: #11e626fb;
+    background-color: transparent;
+}
+
+/* Estilo para o container */
+.container {
+    text-align: center;
+    margin-top: 40px;
+}
+
+/* Estilo para o conteúdo */
+.content {
+    max-width: 600px;
+    margin: auto;
+}
+
+.content h1 {
+    font-size: 3rem;
+}
+
+.content h2 {
+    font-size: 2rem;
+    color: #FFF;
+}
+
+.content p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+}
+
+/* Estilo para os botões */
+.buttons {
+    margin-top: 20px;
+}
+
+.button {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    border: none;
+    border-radius: 4px;
+    color: #fff;
+}
+
+.button-login {
+    background-color: #007bff;
+}
+
+.button-signup {
+    background-color: #28a745;
+    margin-left: 10px;
+}
+
+.button-login:hover,
+.button-signup:hover {
+    opacity: 0.8;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    /* ajustado para ocupar altura total da tela */
+    background-color: #620aa0ce;
+    /* roxo com transparência */
+    padding: 1em;
+    box-sizing: border-box;
+}
+
+.content {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+    font-size: 1vw;
+    color: #edf0f1;
+    text-decoration: none;
+}
+
+.content h1 {
+    font-size: 3em;
+    margin-bottom: 0.2em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.content h2 {
+    font-size: 1.5em;
+    margin-bottom: 1em;
+}
+
+.content p {
+    font-size: 1.2em;
+    margin-bottom: 2em;
+}
+
+.buttons {
+    display: flex;
+    gap: 1em;
+    justify-content: center;
+    /* Centraliza os botões horizontalmente */
+    align-items: center;
+    /* Centraliza os botões verticalmente */
+}
+
+
+.button {
+    padding: 0.5em 1.5em;
+    border: none;
+    border-radius: 5px;
+    font-size: 1em;
+    cursor: pointer;
+}
+
+.button-login {
+    background-color: #FFFFFF;
+    color: #6A0DAD;
+}
+
+.button-signup {
+    background-color: #FFC0CB;
+    /* tom pastel rosa */
+    color: #6A0DAD;
+}
